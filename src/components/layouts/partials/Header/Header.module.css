@@ -1,0 +1,140 @@
+.header {
+    background-color: var(--latte);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Quicksand';
+    padding: 1.25rem 1rem;
+}
+
+.headerBrandContainer {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerBrandContainerNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerBrand {
+    width: 200px;
+}
+
+.headerNav {
+    padding: 0 2rem;
+    background-color: var(--soft-cream);
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    flex: 1;
+    transition: .2s ease-in-out;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+.show {
+    transform: scaleY(1);
+}
+
+.headerNavLinkContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.headerNavLink {
+    color: var(--bistre);
+    font-weight: 500;
+    transition: 0.1s linear;
+    text-decoration: none;
+}
+
+.headerNavLink:hover {
+    color: var(--cocoa-brown);
+}
+
+.active {
+    color: var(--cocoa-brown);
+}
+
+.pending {
+    color: var(--soft-cream);
+}
+
+.divider {
+    width: 100%;
+    height: 5px;
+    border-top: 1.5px solid var(--bistre);
+}
+
+.buttonShow {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 1.5rem;
+    color: var(--bistre);
+    display: flex;
+    align-items: center;
+}
+
+.buttonClose {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 1.5rem;
+    color: var(--bistre);
+    display: flex;
+    align-items: center;
+}
+
+.buttonCloseContainer {
+    display: flex;
+    justify-content: end;
+}
+
+@media screen and (min-width: 1024px) {
+    .headerBrand {
+        width: 250px;
+    }
+
+    .headerNav {
+        position: static;
+        background-color: transparent;
+        padding-inline: 0;
+        transform: scaleY(1);
+    }
+
+    .headerNavLinkContainer {
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    .headerBrandContainerNav {
+        display: none;
+    }
+
+    .buttonShow {
+        display: none;
+    }
+
+    .buttonCloseContainer {
+        display: none;
+    }
+
+    .divider {
+        width: auto;
+        height: 52px;
+        border-right: 1.5px solid var(--bistre);
+    }
+}

@@ -1,0 +1,17 @@
+.button {
+    min-width: max-content;
+    padding: .75em 1em;
+    background-color: var(--bistre);
+    outline: none;
+    color: var(--soft-cream);
+    font-family: 'Quicksand';
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    transition: .1s linear;
+}
+
+button:hover {
+    background-color: var(--cocoa-brown);
+    color: var(--latte);
+}
