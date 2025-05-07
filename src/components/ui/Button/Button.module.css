@@ -1,10 +1,21 @@
+.primary {
+    background-color: var(--bistre);
+    color: var(--latte);
+}
+
+.secondary {
+    background-color: var(--latte);
+    color: var(--bistre);
+}
+
+.wFull {
+    width: 100%;
+}
+
 .button {
     min-width: max-content;
-    width: 100%;
     padding: .75em 1em;
-    background-color: var(--bistre);
     outline: none;
-    color: var(--soft-cream);
     font-family: 'Quicksand';
     font-size: 1rem;
     font-weight: 500;

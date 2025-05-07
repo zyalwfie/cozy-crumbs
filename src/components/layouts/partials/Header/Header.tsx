@@ -36,14 +36,14 @@ const Header = () => {
 
 	const handleClick = () => {
 		setOpen(!open);
-	}
+	};
 
 	return (
 		<header className={styles.header}>
 			<div className={styles.headerBrandContainer}>
 				<img
 					className={styles.headerBrand}
-					src='/cozy-crumbs-brand.png'
+					src='/cozy-crumbs-brand-white.png'
 					alt='Cozy Crumbs'
 				/>
 				<button onClick={handleClick} className={styles.buttonShow}>
@@ -53,14 +53,17 @@ const Header = () => {
 
 			<nav className={`${styles.headerNav} ${open ? styles.show : ''}`}>
 				<div className={styles.buttonCloseContainer}>
-					<button onClick={handleClick} className={styles.buttonClose}>
+					<button
+						onClick={handleClick}
+						className={styles.buttonClose}
+					>
 						<i className='bx bx-x'></i>
 					</button>
 				</div>
 				<div className={styles.headerBrandContainerNav}>
 					<img
 						className={styles.headerBrand}
-						src='/cozy-crumbs-brand.png'
+						src='/cozy-crumbs-brand-white.png'
 						alt='Cozy Crumbs'
 					/>
 				</div>
@@ -81,7 +84,9 @@ const Header = () => {
 						</NavLink>
 					))}
 					<div className={styles.divider}></div>
-					<Button to='/login'>Buy Some</Button>
+					<Button to='/login' className='secondary'>
+						Buy Some
+					</Button>
 				</ul>
 			</nav>
 		</header>

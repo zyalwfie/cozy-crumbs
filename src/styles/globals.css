@@ -96,6 +96,11 @@ video {
     vertical-align: baseline;
 }
 
+
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Nunito';
 }

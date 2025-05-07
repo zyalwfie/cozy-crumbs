@@ -60,7 +60,7 @@ const Login = () => {
 					</div>
 				</div>
 				<div className={styles.footerLogin}>
-					<Button type='submit'>Log in</Button>
+					<Button type='submit' className='primary wFull'>Log in</Button>
 				</div>
 			</form>
 		</section>

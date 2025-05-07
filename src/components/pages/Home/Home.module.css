@@ -1,0 +1,130 @@
+.home {
+    position: relative;
+    background-color: var(--latte);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding-inline: 1rem;
+    padding-top: 7rem;
+    padding-bottom: 8rem;
+}
+
+.headerText {
+    color: var(--bistre);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    font-weight: bold;
+}
+
+.descText {
+    color: var(--bistre);
+    text-align: end;
+}
+
+.imgWrapper {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: -6rem;
+    padding-inline: 1rem;
+}
+
+.contentWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -2rem;
+    right: 0;
+    border-radius: 9999rem;
+}
+
+.contentBrand {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .home {
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 16rem;
+    }
+
+    .imgWrapper {
+        height: 400px;
+        bottom: -11rem;
+    }
+
+    .tag {
+        width: 8rem;
+        height: 8rem;
+        top: -3.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home {
+        padding-inline: 6rem;
+        padding-top: 10rem;
+    }
+
+    .imgWrapper {
+        height: 400px;
+        bottom: -12rem;
+        padding-inline: 6rem;
+    }
+
+    .tag {
+        top: -3rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .home {
+        padding-inline: 14rem;
+    }
+
+    .imgWrapper {
+        padding-inline: 14rem;
+    }
+
+    .tag {
+        top: -4rem;
+    }
+
+    .headerText {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .home {
+        padding-bottom: 28rem;
+    }
+    
+    .headerText {
+        font-size: 2.75rem;
+    }
+    
+    .imgWrapper {
+        height: 650px;
+    }
+
+    .imgWrapper {
+        bottom: -18rem;
+    }
+}
