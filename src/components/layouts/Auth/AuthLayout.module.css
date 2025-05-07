@@ -1,0 +1,91 @@
+.leftContent {
+    display: none;
+    position: relative;
+}
+
+.overlayImg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.6), transparent);
+    backdrop-filter: blur(1px);
+}
+
+.brandContainer {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.brand {
+    width: 250px;
+}
+
+.content {
+    position: absolute;
+    bottom: 2rem;
+    inset-inline: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content h3 {
+    font-size: 1.75rem;
+    color: white;
+    font-family: 'Quicksand';
+    font-weight: bold;
+}
+
+.quoteAuthorContainer {
+    color: white;
+}
+
+.quoteAuthorContainer p {
+    font-weight: bold;
+}
+
+.quoteAuthorContainer span {
+    font-weight: lighter;
+}
+
+.rightContent {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .authLayout {
+        height: 100vh;
+        display: flex;
+    }
+
+    .leftContent {
+        width: 40%;
+        background-image: url('/img/auth-page-img.jpg');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .rightContent {
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1440px) {
+    .leftContent {
+        width: 30%;
+    }
+
+    .rightContent {
+        width: 70%;
+    }
+}

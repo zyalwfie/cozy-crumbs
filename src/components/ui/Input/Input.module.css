@@ -1,0 +1,19 @@
+.input {
+    padding: .75rem 1rem;
+    transition: .2s linear;
+    border: 1px solid var(--bistre);
+    font-family: 'Nunito';
+}
+
+.input::placeholder {
+    font-family: 'Quicksand';
+}
+
+.input:focus {
+    border: 1px solid var(--bistre);
+    outline: none;
+}
+
+.input:focus-visible {
+    outline: 2px solid var(--cocoa-brown);
+}
