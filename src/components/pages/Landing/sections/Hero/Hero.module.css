@@ -78,14 +78,12 @@
 
 @media (min-width: 1024px) {
     .hero {
-        padding-inline: 6rem;
         padding-top: 10rem;
     }
 
     .imgWrapper {
         height: 400px;
         bottom: -12rem;
-        padding-inline: 6rem;
     }
 
     .tag {

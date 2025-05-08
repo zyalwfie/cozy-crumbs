@@ -22,12 +22,16 @@ const SignatureCard = (props: ISignatureCard) => {
 			data-id={id}
 		>
 			<div className={styles.headCard}>
-				<div>
+				<div className={styles.categoryContainer}>
 					<span>{category}</span>
 					{is_available ? (
-						<span className={styles.isAvailable}></span>
+						<span className={styles.isAvailable}>
+							<i className='bx bxs-circle'></i>
+						</span>
 					) : (
-						<span className={styles.notAvailable}></span>
+						<span className={styles.notAvailable}>
+							<i className='bx bxs-circle'></i>
+						</span>
 					)}
 				</div>
 			</div>

@@ -30,18 +30,21 @@
 @media (min-width: 1024px) {
     .signature {
         padding-top: 18rem;
-        padding-inline: 6rem;
     }
 
     .textHeadSection {
         font-size: 2rem;
+    }
+
+    .containerCard {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (min-width: 1440px) {
     .signature {
         padding-inline: 14rem;
-        padding-top: 26rem;
+        padding-top: 28rem;
     }
 
     .textHeadSection {
