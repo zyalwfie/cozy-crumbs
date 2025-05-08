@@ -1,0 +1,50 @@
+.signature {
+    padding-top: 10rem;
+    padding-inline: 1rem;
+}
+
+.textHeadSection {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    color: var(--bistre);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .containerCard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .textHeadSection {
+        font-size: 1.75rem;
+    }
+
+    .signature {
+        padding-top: 16rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .signature {
+        padding-top: 18rem;
+        padding-inline: 6rem;
+    }
+
+    .textHeadSection {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .signature {
+        padding-inline: 14rem;
+        padding-top: 26rem;
+    }
+
+    .textHeadSection {
+        font-size: 2.5rem;
+    }
+}

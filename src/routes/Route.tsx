@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import Home from '../components/pages/Home';
+import Home from '../components/pages/Landing/Home';
 import LandingLayout from '../components/layouts/Landing';
 import Login from '../components/pages/Login';
 import AuthLayout from '../components/layouts/Auth';

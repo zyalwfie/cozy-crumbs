@@ -3,4 +3,8 @@ interface ILogin {
 	password: string;
 }
 
-export type { ILogin };
+interface ILoginResponse {
+	token: string;
+}
+
+export type { ILogin, ILoginResponse };
