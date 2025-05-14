@@ -1,0 +1,25 @@
+.dashboard {
+    position: relative;
+}
+
+.main {
+    position: relative;
+    padding-top: 6rem;
+    padding-inline: 1.5rem;
+    overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+    .dashboard {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: max-content 1fr;
+        grid-template-areas: "sidebar header" "sidebar content";
+    }
+
+    .main {
+        grid-area: content;
+        padding: 2rem;
+    }
+}

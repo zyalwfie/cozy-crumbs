@@ -15,8 +15,8 @@ const ProtectedRoute = (props: PropsTypes) => {
         return <Navigate to='/login' replace />
     }
 
-    if (auth && currentRoute) {
-        return <Navigate to='/orders' replace />
+    if (auth && currentRoute === '/login') {
+        return <Navigate to='/dashboard' replace />
     }
 
     return <>{children}</>

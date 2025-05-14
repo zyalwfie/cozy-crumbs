@@ -21,4 +21,27 @@ const galleryAssets = [
 	},
 ];
 
-export { galleryAssets };
+const navTextContent = [
+	{
+		id: 1,
+		text: 'Home',
+		path: '/',
+	},
+	{
+		id: 2,
+		text: 'Menu',
+		path: '/menu',
+	},
+	{
+		id: 3,
+		text: 'Gallery',
+		path: '/gallery',
+	},
+	{
+		id: 4,
+		text: 'Orders',
+		path: '/orders',
+	},
+];
+
+export { galleryAssets, navTextContent };

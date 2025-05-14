@@ -2,36 +2,9 @@ import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
 import Button from '../../../ui/Button';
 import { useState } from 'react';
+import { navTextContent } from '../../../../constants/assets';
 
 const Header = () => {
-	const navTextContent = [
-		{
-			id: 1,
-			text: 'Home',
-			path: '/',
-		},
-		{
-			id: 2,
-			text: 'About',
-			path: '/about',
-		},
-		{
-			id: 3,
-			text: 'Menu',
-			path: '/menu',
-		},
-		{
-			id: 4,
-			text: 'Gallery',
-			path: '/gallery',
-		},
-		{
-			id: 5,
-			text: 'Reviews',
-			path: '/reviews',
-		},
-	];
-
 	const [open, setOpen] = useState(false);
 
 	const handleClick = () => {
@@ -84,7 +57,7 @@ const Header = () => {
 						</NavLink>
 					))}
 					<div className={styles.divider}></div>
-					<Button to='/login' className='secondary'>
+					<Button to='/dashboard' className='secondary'>
 						Buy Some
 					</Button>
 				</ul>

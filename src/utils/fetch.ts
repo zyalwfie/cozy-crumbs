@@ -1,6 +1,11 @@
+import { getLocalStorage } from './storage';
+
 const fetchAPI = async <T>(
 	url: string,
-	options?: RequestInit & { query?: Record<string, string | number | boolean> }
+	options?: RequestInit & {
+		query?: Record<string, string | number | boolean>;
+		skipAuth?: boolean;
+	}
 ): Promise<T> => {
 	try {
 		let finalUrl = `${import.meta.env.VITE_API_URL}${url}`;
@@ -15,11 +20,19 @@ const fetchAPI = async <T>(
 			finalUrl += `?${queryParams.toString()}`;
 		}
 
+		const headers: HeadersInit = {
+			'Content-Type': 'application/json',
+		};
+
+		if (!options?.skipAuth) {
+			const token = getLocalStorage('auth');
+			if (token) {
+				headers.Authorization = `Bearer ${token}`;
+			}
+		}
+
 		const response = await fetch(finalUrl, {
-			headers: {
-				'Content-Type': 'application/json',
-				Authorization: `Bearer ${localStorage.getItem('token')}`,
-			},
+			headers,
 			...options,
 		});
 
@@ -30,7 +43,6 @@ const fetchAPI = async <T>(
 
 		return response.json() as Promise<T>;
 	} catch (error: unknown) {
-		// Type guard to safely handle the error
 		if (error instanceof Error) {
 			console.error({ message: 'Fetch Error', error: error.message });
 			throw error;

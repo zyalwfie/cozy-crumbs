@@ -4,13 +4,10 @@ import SignatureCard from '../../../../ui/SignatureCard';
 import styles from './Signature.module.css';
 
 const Signatures = () => {
-	const { data, isLoading, isError } = useQuery({
+	const { data } = useQuery({
 		queryKey: ['signatureMenu'],
 		queryFn: MenuService.getSignatureMenu,
 	});
-
-	if (isLoading) return <p>Loading signatures...</p>;
-	if (isError) return <p>Oops! Something went wrong 🚨</p>;
 
 	return (
 		<section className={styles.signature}>

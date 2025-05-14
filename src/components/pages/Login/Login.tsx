@@ -19,7 +19,7 @@ const Login = () => {
 		const result = await login(payload);
 		setLocalStorage('auth', result.token);
 
-		return navigate('/orders');
+		return navigate('/dashboard');
 	};
 
 	return (

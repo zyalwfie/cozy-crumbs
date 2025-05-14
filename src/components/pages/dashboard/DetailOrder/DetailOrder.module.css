@@ -1,0 +1,91 @@
+.divider {
+    border-bottom: 1px solid var(--bistre);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.detailOwner {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Quicksand';
+    margin-bottom: 1rem;
+}
+
+.detailOwnerName {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.detailCart {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desc {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-direction: column;
+}
+
+.itemName {
+    font-family: 'Quicksand';
+}
+
+.itemPrice {
+    font-family: 'Titillium Web';
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.itemImage {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.detailName,
+.detailTotal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.backButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+    padding: .75rem 1rem;
+    border: 1px solid var(--bistre);
+    color: var(--bistre);
+    transition: .1s linear;
+}
+
+.backButton:hover {
+    background-color: var(--bistre);
+    color: var(--latte);
+}
+
+@media (min-width: 1024px) {
+    .detailOrder {
+        width: 50%;
+    }
+}

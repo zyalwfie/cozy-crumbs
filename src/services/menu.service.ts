@@ -10,7 +10,11 @@ export const MenuService = {
 		page?: number;
 		pageSize?: number;
 	}) => {
-		return fetchAPI<{ data: ISignatureCard[] }>('/menu', { query: params });
+		return fetchAPI<{ data: ISignatureCard[] }>('/menu', {
+			query: params,
+			method: 'GET',
+			skipAuth: true,
+		});
 	},
 
 	getSignatureMenu: async () => {
@@ -20,6 +24,8 @@ export const MenuService = {
 				sortOrder: 'desc',
 				pageSize: 4,
 			},
+			method: 'GET',
+			skipAuth: true,
 		});
 	},
 };

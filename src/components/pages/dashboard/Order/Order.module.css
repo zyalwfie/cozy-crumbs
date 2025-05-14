@@ -1,0 +1,71 @@
+.order {
+    overflow: auto;
+    max-height: 400px;
+}
+
+.table {
+    color: var(--bistre);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 1px 0 var(--bistre);
+}
+
+.table thead tr th:nth-last-child(1) {
+    padding-right: 0;
+}
+
+.table thead tr th {
+    text-align: start;
+    padding-right: 1.25rem;
+    padding-bottom: .75rem;
+    white-space: nowrap;
+    font-weight: bold;
+    font-family: 'Quicksand';
+}
+
+.table tbody {
+    padding-top: 1rem;
+}
+
+.table tbody tr th {
+    text-align: start;
+}
+
+.table tbody tr td:nth-last-child(1) {
+    padding-right: 0;
+}
+
+.table tbody tr td {
+    padding-right: 1rem;
+    padding-block: 1rem;
+    text-align: start;
+}
+
+.textHeadTable {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    color: var(--bistre);
+    margin-bottom: 1.5rem;
+}
+
+.detailButton {
+    color: var(--latte);
+    padding: .25rem .5rem;
+    border: 1px solid var(--latte);
+    background-color: var(--bistre);
+}
+
+@media (min-width: 1440px) {
+    .order {
+        width: 50%;
+        height: 500px;
+    }
+}

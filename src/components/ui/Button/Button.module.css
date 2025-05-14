@@ -8,19 +8,32 @@
     color: var(--bistre);
 }
 
+.support {
+    border: 1px solid var(--cocoa-brown) !important;
+    color: var(--cocoa-brown);
+}
+
 .wFull {
     width: 100%;
 }
 
 .button {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
     min-width: max-content;
     padding: .75em 1em;
     outline: none;
     font-family: 'Quicksand';
     font-size: 1rem;
     font-weight: 500;
-    border: none;
+    border: 1px solid transparent;
     transition: .1s linear;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
 }
 
 button:hover {
