@@ -16,11 +16,14 @@ const DetailOrder = () => {
 	useEffect(() => {
 		const fetchOrder = async () => {
 			const result = await OrderService.getOrderDetail(`${id}`);
-			console.log(result);
 			setOrder(result);
 		};
 		fetchOrder();
 	}, [id]);
+
+	useEffect(() => {
+		document.title = `Crazy Crumbs | Dashboard - ${detailOrder?.customer_name}`;
+	}, [detailOrder]);
 
 	return (
 		<section className={styles.detailOrder}>
@@ -54,7 +57,7 @@ const DetailOrder = () => {
 					<div className={styles.divider}></div>
 					<div className={styles.detailItem}>
 						{detailOrder?.cart.map((item) => (
-							<div className={styles.detailName}>
+							<div className={styles.detailName} key={item.menuItem.id}>
 								<h4>{item.menuItem.name}</h4>
 								<span>{item.quantity}x</span>
 							</div>

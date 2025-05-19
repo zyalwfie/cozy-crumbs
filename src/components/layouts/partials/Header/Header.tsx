@@ -57,7 +57,7 @@ const Header = () => {
 						</NavLink>
 					))}
 					<div className={styles.divider}></div>
-					<Button to='/dashboard' className='secondary'>
+					<Button to='/dashboard/orders' variant='secondary'>
 						Buy Some
 					</Button>
 				</ul>

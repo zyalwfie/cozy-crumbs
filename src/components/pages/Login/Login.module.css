@@ -46,6 +46,14 @@
 
 .footerLogin {
     display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.errMsg {
+    color: tomato;
+    font-style: italic;
+    text-align: center;
 }
 
 @media screen and (min-width: 1024px) {

@@ -12,7 +12,8 @@ export interface IMenu {
 	price: number;
 	image_url: string;
 	category: string;
-	is_available?: boolean;
+	is_available: boolean;
+	created_at: string;
 }
 
 export interface IMenuResponse {

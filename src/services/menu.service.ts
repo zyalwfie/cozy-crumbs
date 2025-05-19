@@ -1,20 +1,19 @@
-import { IMenuResponse } from '../types/menu';
+import { IMenu } from '../types/menu';
 import { ISignatureCardResponse } from '../types/signature';
 import fetchAPI from '../utils/fetch';
 
 export const MenuService = {
 	getMenu: async (params?: {
-		page?: number;
-		pageSize?: number;
-		search?: string;
 		category?: string;
+		search?: string;
 		sortBy?: string;
 		sortOrder?: string;
+		page?: number;
+		pageSize?: number;
 	}) => {
-		return fetchAPI<IMenuResponse>('/menu', {
-			query: params,
+		return fetchAPI<{ data: IMenu[] }>('/menu', {
 			method: 'GET',
-			skipAuth: true,
+			query: params,
 		});
 	},
 

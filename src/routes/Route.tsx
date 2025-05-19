@@ -7,6 +7,7 @@ import ProtectedRoute from './ProtectedRoute';
 import Order from '../components/pages/dashboard/Order';
 import DashbboardLayout from '../components/layouts/Dashboard';
 import DetailOrder from '../components/pages/dashboard/DetailOrder';
+import CreateOrder from '../components/pages/dashboard/CreateOrder';
 
 const routes: RouteObject[] = [
 	{
@@ -38,11 +39,24 @@ const routes: RouteObject[] = [
 		),
 		children: [
 			{
-				index: true,
-				element: <Order />,
+				path: 'orders',
+				children: [
+					{
+						index: true,
+						element: <Order />
+					},
+					{
+						path: ':id',
+						element: <DetailOrder />
+					}
+				]
 			},
 			{
-				path: 'orders/:id',
+				path: 'create-orders',
+				element: <CreateOrder />
+			},
+			{
+				path: ':id',
 				element: <DetailOrder />,
 			},
 		],

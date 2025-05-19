@@ -3,6 +3,7 @@
     transition: .2s linear;
     border: 1px solid var(--bistre);
     font-family: 'Nunito';
+    width: 100%;
 }
 
 .input::placeholder {

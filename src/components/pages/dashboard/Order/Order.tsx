@@ -17,19 +17,29 @@ const Order = () => {
 	};
 
 	useEffect(() => {
+		const fetchOrder = async () => {
+			try {
+				const response = await OrderService.getOrder();
+				setOrders(response.data);
+			} catch (err) {
+				console.error('Failed to load orders!', err);
+			}
+		};
 		if (refetchOrder) {
-			const fetchOrder = async () => {
-				const result = await OrderService.getOrder();
-				setOrders(result.data);
-			};
 			fetchOrder();
 			setRefetchOrder(false);
 		}
 	}, [refetchOrder]);
 
+	useEffect(() => {
+		document.title = 'Crazy Crumbs | Dashboard - Orders';
+	}, []);
+
 	return (
 		<>
-			<h1 className={styles.textHeadTable}>List Orders</h1>
+			<div className={styles.headContainer}>
+				<h1 className={styles.textHeadTable}>List Orders</h1>
+			</div>
 			<section className={styles.order}>
 				<table className={styles.table}>
 					<thead>
@@ -53,7 +63,7 @@ const Order = () => {
 								<td className={styles.action}>
 									<Link
 										className={styles.detailButton}
-										to={`orders/${order.id}`}
+										to={`${order.id}`}
 										state={{ background: location }}
 									>
 										Detail

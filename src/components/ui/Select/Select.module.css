@@ -1,0 +1,43 @@
+.wrapper {
+    position: relative;
+}
+
+.chevron {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    color: var(--bistre);
+    transition: .1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
+}
+
+.turn {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.select {
+    padding: .75rem 1rem;
+    transition: .2s linear;
+    border: 1px solid var(--bistre);
+    font-family: 'Nunito';
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.select::placeholder {
+    font-family: 'Quicksand';
+}
+
+.select:focus {
+    border: 1px solid var(--bistre);
+    outline: none;
+}
+
+.select:focus-visible {
+    outline: 2px solid var(--cocoa-brown);
+}

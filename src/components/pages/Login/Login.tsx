@@ -6,9 +6,23 @@ import styles from './Login.module.css';
 import { login } from '../../../services/auth.service';
 import { setLocalStorage } from '../../../utils/storage';
 import { useNavigate } from 'react-router-dom';
+import Spinner from '../../ui/Spinner';
+import { useMutation } from '@tanstack/react-query';
 
 const Login = () => {
 	const navigate = useNavigate();
+
+	const { mutate, isPending, isError, error } = useMutation({
+		mutationFn: login,
+		onSuccess: (data) => {
+			setLocalStorage('auth', data.token);
+			navigate('/dashboard/orders');
+		},
+		onError: (err) => {
+			console.error(err);
+		},
+	});
+
 	const handleLogin = async (event: FormEvent) => {
 		event.preventDefault();
 		const form = event.target as HTMLFormElement;
@@ -16,10 +30,7 @@ const Login = () => {
 			email: form.email.value,
 			password: form.password.value,
 		};
-		const result = await login(payload);
-		setLocalStorage('auth', result.token);
-
-		return navigate('/dashboard');
+		mutate(payload);
 	};
 
 	return (
@@ -60,7 +71,14 @@ const Login = () => {
 					</div>
 				</div>
 				<div className={styles.footerLogin}>
-					<Button type='submit' className='primary wFull'>Log in</Button>
+					<Button type='submit' className='wFull'>
+						{isPending ? <Spinner /> : 'Log in'}
+					</Button>
+					{isError && (
+						<p className={styles.errMsg}>
+							{error?.message ?? 'Login failed. Please try again.'}
+						</p>
+					)}
 				</div>
 			</form>
 		</section>

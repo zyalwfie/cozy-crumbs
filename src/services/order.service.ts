@@ -2,20 +2,38 @@ import { IOrder, IOrderResponse } from '../types/order';
 import fetchAPI from '../utils/fetch';
 
 export const OrderService = {
-	getOrder: async (): Promise<IOrderResponse> => {
+	getOrder: async (params?: {
+		page?: number;
+		pageSize?: number;
+		search?: string;
+		status?: string;
+		sortBy?: string;
+		sortOrder?: string;
+	}): Promise<IOrderResponse> => {
 		return await fetchAPI('/orders', {
 			method: 'GET',
-			query: {
-				pageSize: 25,
-				sortBy: 'customer_name',
-				sortOrder: 'desc',
-			},
+			query: params,
 		});
 	},
 
 	getOrderDetail: async (id: string): Promise<IOrder> => {
 		return await fetchAPI(`/orders/${id}`, {
 			method: 'GET',
+		});
+	},
+
+	createOrder: async (payload: {
+		customerName: string;
+		tableNumber: number;
+		cart: Array<{
+			menuItemId: string;
+			quantity: number;
+			notes?: string;
+		}>;
+	}) => {
+		return await fetchAPI('/orders', {
+			method: 'POST',
+			body: JSON.stringify(payload),
 		});
 	},
 
