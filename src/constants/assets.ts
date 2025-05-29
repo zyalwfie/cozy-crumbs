@@ -28,19 +28,9 @@ const navTextContent = [
 		path: '/',
 	},
 	{
-		id: 2,
-		text: 'Menu',
-		path: '/menu',
-	},
-	{
-		id: 3,
-		text: 'Gallery',
-		path: '/gallery',
-	},
-	{
 		id: 4,
 		text: 'Orders',
-		path: '/orders',
+		path: '/dashboard',
 	},
 ];
 

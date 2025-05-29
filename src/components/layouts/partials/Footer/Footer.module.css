@@ -1,0 +1,150 @@
+.footer {
+    margin-top: 5rem;
+    background: url('/img/footer-background.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, .9);
+    backdrop-filter: blur(1px);
+    width: 100%;
+    color: white;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detailContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imageWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+.headerNavLink {
+    color: var(--latte);
+    font-weight: 500;
+    transition: 0.1s linear;
+    text-decoration: none;
+}
+
+.linkContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialIconContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.iconContainer {
+    border: 1px solid var(--latte);
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .1s linear;
+    color: var(--latte);
+}
+
+.iconContainer:hover {
+    background-color: var(--latte);
+    color: var(--bistre);
+}
+
+.headerNavLink:hover {
+    color: var(--cocoa-brown);
+}
+
+.copyrightContainer {
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid var(--latte);
+    text-align: center;
+}
+
+.copyright {
+    font-family: 'Quicksand';
+    font-size: .75rem;
+}
+
+.copyrightBold {
+    font-weight: bold;
+}
+
+.active {
+    color: var(--cocoa-brown);
+}
+
+.pending {
+    color: var(--soft-cream);
+}
+
+@media (min-width: 768px) {
+    .imageWrapper {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .copyrightContainer {
+        text-align: start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        margin-top: 8rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .content {
+        padding-inline: 14rem;
+    }
+}

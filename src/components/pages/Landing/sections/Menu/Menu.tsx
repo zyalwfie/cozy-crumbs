@@ -13,7 +13,7 @@ const Menu = () => {
 	});
 
 	return (
-		<section className={styles.menu}>
+		<section className={styles.menu} id='menu'>
 			<div className={styles.headSection}>
 				<h3>Our Delicious Menu</h3>
 			</div>

@@ -17,6 +17,10 @@
 }
 
 @media (min-width: 1024px) {
+    .menu {
+        padding-top: 8rem;
+    }
+    
     .menuContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -26,6 +30,7 @@
 
     .headSection {
         font-size: 2rem;
+        text-align: center;
     }
 }
 

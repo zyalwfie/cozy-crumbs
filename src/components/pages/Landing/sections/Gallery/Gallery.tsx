@@ -3,7 +3,7 @@ import styles from './Gallery.module.css';
 
 const Gallery = () => {
   return (
-		<section className={styles.gallery}>
+		<section className={styles.gallery} id='gallery'>
 			<div className={styles.headSection}>
 				<h3 className={styles.textHead}>Brewed to Inspire<br />Every Sip</h3>
 				<p className={styles.textContent}>
